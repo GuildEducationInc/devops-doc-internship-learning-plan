@@ -35,7 +35,7 @@ Helm is a “package manager” for Kuberentes. It allows a simple, single comma
     # Install bitnami redis chart and name the release 'redis'
     helm install bitnami/redis --generate-name
     ```
-    This will install the basic Redis chart from the stable repository with a random name
+    This will install the basic Redis chart from the bitnami repository with a random name
 2. List releases: `helm list -A`
     1. What name does your release have?
     2. What is the `STATUS`
@@ -44,8 +44,8 @@ Helm is a “package manager” for Kuberentes. It allows a simple, single comma
     1. What namespace did it install into?
     2. How would you install it into a different namespace?
     3. List the pods
-5. What if you want to configure the chart outside other than the defaults?
-    1. Use `helm inspect stable/redis` to see the templates and parameters and configuration information.  Sometimes that is overwhelming so commonly, you can use the [documentation](https://github.com/helm/charts/tree/master/stable/redis).  
+5. What if you want to install the chart with custom values instead of the defaults?
+    1. Use `helm show values bitnami/redis` to see the templates and parameters and configuration information.  Sometimes that is overwhelming so commonly, you can use the [documentation](https://github.com/bitnami/charts/tree/master/bitnami/redis).  
     2. Lets install the chart again, but with `rbac.create` turned on. This will configure the chart to create rbac roles and bindings for the redis pods.
         ```bash
         # Notice the --set command which sets the values from the command line
@@ -62,7 +62,7 @@ Helm is a “package manager” for Kuberentes. It allows a simple, single comma
 8. Create your own chart: `helm create new-chart`
     1. Open the chart and see what `templates` are created for you and what values are created for you.
         1. What app will this chart deploy by default?
-        2. Will it deploy successfully as is? Try. `helm upgrade -i new-chart new-chart/` Notice that because the chart is not coming from a repository like `stable/redis` you just provide the path to the chart.
+        2. Will it deploy successfully as is? Try. `helm upgrade -i new-chart new-chart/` Notice that because the chart is not coming from a repository like `bitnami/redis` you just provide the path to the chart.
     2. Pick a simple app you’d like to install and convert this chart to deploy it.
         1. Make sure to use the `templates`  in `new-chart/templates/helpers.tpl` for consistency
         2. What happens if you need to add a new file to `new-chart/templates` ? Will helm automatically deploy it? Try.
