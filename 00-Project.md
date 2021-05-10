@@ -1,9 +1,7 @@
 # Part 0: Project
 
 ## Instructions
-The main part of your time at Guild will be spent working on a project of your choice.
-The following is a list of projects that we think you can help us with. It is your responsibility
-to talk to your manager and choose one of the following projects.
+The main part of your time at Guild will be spent working on a project of your choice. The following is a list of projects that we think you can help us with. It is your responsibility to talk to your manager and choose one of the following projects. Once you pick a project, update this repo with the project you are working on and write a set of features expected by the end of the project. Work closely with your manager to come up with a set of featues.
 
 1.Monitoring Dashboards
   * Dashboards as Iac
