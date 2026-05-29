@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+>
+> This project is deprecated and is read-only for historical context only.
+
 # Guild Education Apprentice Learning Plan
 
 This is an example learning plan for new DevOps Engineers.
